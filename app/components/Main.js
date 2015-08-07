@@ -3,7 +3,8 @@
  */
 
 var React = require('react'),
-    RouteHandler = require('react-router').RouteHandler;
+    RouteHandler = require('react-router').RouteHandler,
+    SearchGithub = require('./SearchGithub');
 
 //<RouteHandler /> will be swapped out, replace with whatever going to be passed in
 //it is just like ng-view in AngularJS
@@ -13,7 +14,7 @@ var Main = React.createClass({
             <div className="main-container">
                 <nav className="navbar navbar-default" role="navigation">
                     <div className="col-sm-7 col-sm-offset-2" style={{marginTop: 15}}>
-                        MENU
+                        <SearchGithub />
                     </div>
                 </nav>
                 <div className="container">
