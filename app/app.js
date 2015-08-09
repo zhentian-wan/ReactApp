@@ -2,10 +2,10 @@
  * Created by Answer1215 on 8/6/2015.
  */
 
-var React = require('react'),
-    Router = require('react-router'),
-    routers = require('./config/routes');
+import React from 'react';
+import Router from 'react-router';
+import routers from './config/routes';
 
-Router.run(routers, function(Root) {
-    React.render(<Root />, document.getElementById('app'));
+Router.run(routers, (Root, state) => {
+    React.render(<Root {...state}/>, document.getElementById('app'));
 });

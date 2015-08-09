@@ -1,17 +1,15 @@
-/**
- * Created by Answer1215 on 8/6/2015.
- */
 
-var React = require('react');
+import React from 'react';
 
-var Home = React.createClass({
-    render: function() {
+class Home extends React.Component{
+
+    render() {
         return (
             <h2>
                 Content will be listed below
             </h2>
         )
     }
-});
+}
 
-module.exports = Home;
+export default Home;

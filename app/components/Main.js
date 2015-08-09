@@ -1,15 +1,11 @@
-/**
- * Created by Answer1215 on 8/5/2015.
- */
-
-var React = require('react'),
-    RouteHandler = require('react-router').RouteHandler,
-    SearchGithub = require('./SearchGithub');
+import React from 'react';
+import {RouteHandler} from 'react-router';
+import SearchGithub from './SearchGithub';
 
 //<RouteHandler /> will be swapped out, replace with whatever going to be passed in
 //it is just like ng-view in AngularJS
-var Main = React.createClass({
-    render: function(){
+class Main extends React.Component{
+    render(){
         return (
             <div className="main-container">
                 <nav className="navbar navbar-default" role="navigation">
@@ -18,11 +14,11 @@ var Main = React.createClass({
                     </div>
                 </nav>
                 <div className="container">
-                    <RouteHandler />
+                    <RouteHandler {...this.props}/>
                 </div>
             </div>
         )
     }
-});
+}
 
-module.exports = Main;
+export default Main;
