@@ -36,7 +36,7 @@ class Profile extends React.Component{
     }
 
     handleAddNote(newNote) {
-        
+
         base.post(this.router.getCurrentParams().username, {
             data: this.state.notes.concat([newNote])
         });
@@ -47,7 +47,6 @@ class Profile extends React.Component{
     componentDidMount() {
         //Here is where you're going to want to do all your AJAX requests.
         // It's where you're going to want to set up all your Firebase listeners.
-
         this.init();
     }
     componentWillReceiveProps() {
